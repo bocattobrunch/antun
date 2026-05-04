@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>antun.</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base and Grid background */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: 
+                linear-gradient(#e5e5e5 1px, transparent 1px),
+                linear-gradient(90deg, #e5e5e5 1px, transparent 1px);
+            background-size: 50px 50px;
+            font-family: 'Courier Prime', monospace;
+            color: #111;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Layout Container */
+        .wrapper {
+            flex: 1; /* Pushes footer to bottom */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 80px; /* Space between text and photo */
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Left Side (Text & Links) */
+        .content-col {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        /* The main text card */
+        .main-statement {
+            font-size: 1.5rem;
+            line-height: 1.4;
+            background: #f6f3eb; /* Paper-like color */
+            padding: 30px;
+            box-shadow: 4px 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #dcd5c6;
+            transform: rotate(-1deg);
+        }
+
+        .main-statement p {
+            margin: 0;
+        }
+
+        /* Links Container */
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            padding-left: 15px;
+        }
+
+        /* Navigation links */
+        .nav-item {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: lowercase;
+            text-decoration: none;
+            color: #111;
+            background: white;
+            padding: 5px 10px;
+            border: 1px solid #111;
+            box-shadow: 2px 2px 0px #111;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .nav-item.gallery-link {
+            transform: rotate(2deg);
+        }
+
+        .nav-item.contact-link {
+            transform: rotate(-2deg);
+        }
+
+        .nav-item:hover {
+            transform: translate(-2px, -2px) rotate(0deg) !important;
+            box-shadow: 4px 4px 0px #111;
+        }
+
+        /* Right Side (Photo) */
+        .photo-wrapper {
+            background-color: white;
+            padding: 12px 12px 40px 12px; /* Polaroid effect */
+            box-shadow: 2px 5px 15px rgba(0,0,0,0.1);
+            transform: rotate(3deg);
+            max-width: 280px; /* Adjust size here */
+        }
+
+        .photo-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            border: 1px solid #eee;
+        }
+
+        /* Footer */
+        .site-footer {
+            text-align: center;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            color: #666;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive for mobile phones */
+        @media (max-width: 768px) {
+            .wrapper {
+                flex-direction: column-reverse; /* Puts photo on top on mobile */
+                gap: 50px;
+                padding-top: 60px;
+            }
+
+            .content-col {
+                align-items: center;
+            }
+
+            .nav-links {
+                padding-left: 0;
+            }
+            
+            .photo-wrapper {
+                max-width: 240px;
+                transform: rotate(-2deg); /* Slightly different angle for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="wrapper">
+        <!-- Text & Links Column -->
+        <div class="content-col">
+            <div class="main-statement">
+                <p>antun.</p>
+                <p>nineteen.</p>
+                <p>based in mx.</p>
+            </div>
+
+            <div class="nav-links">
+                <a href="#gallery" class="nav-item gallery-link">gallery</a>
+                <a href="#contact" class="nav-item contact-link">contact</a>
+            </div>
+        </div>
+
+        <!-- Photo Column -->
+        <div class="photo-wrapper">
+            <!-- La imagen debe llamarse foto.jpg y estar en la misma carpeta que este archivo -->
+            <img src="foto.jpg" alt="Antun">
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        antun rodriguez 2026.
+    </footer>
+
+</body>
+</html>
