@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gallery</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="icon.png">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4; /* Mantenemos el color base del sitio */
+            background-color: #f4f4f4;
             font-family: 'Courier Prime', monospace;
             color: #111;
             min-height: 100vh;
@@ -25,7 +25,7 @@
         /* Layout Container */
         .wrapper {
             flex: 1;
-            max-width: 1000px; /* Ancho máximo para que no se estire demasiado en PC */
+            max-width: 1000px;
             margin: 0 auto;
             padding: 40px 20px;
             width: 100%;
@@ -64,22 +64,22 @@
         /* VSCO Grid */
         .vsco-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columnas en escritorio */
-            gap: 15px; /* Espaciado uniforme estilo feed */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
         }
 
         /* Individual Items */
         .vsco-item {
             width: 100%;
-            aspect-ratio: 4 / 5; /* Proporción vertical clásica de VSCO */
-            background-color: #e5e5e5; /* Color de fondo mientras carga la imagen */
+            aspect-ratio: 4 / 5;
+            background-color: #e5e5e5;
             overflow: hidden;
         }
 
         .vsco-item img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Asegura que la imagen llene el espacio sin deformarse */
+            object-fit: cover;
             display: block;
             transition: filter 0.3s ease;
         }
@@ -103,14 +103,14 @@
         /* Responsive */
         @media (max-width: 768px) {
             .vsco-grid {
-                grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets/celulares grandes */
+                grid-template-columns: repeat(2, 1fr);
                 gap: 10px;
             }
         }
 
         @media (max-width: 480px) {
             .vsco-grid {
-                grid-template-columns: 1fr; /* 1 columna en celulares pequeños */
+                grid-template-columns: 1fr;
                 gap: 15px;
             }
         }
@@ -126,36 +126,26 @@
 
         <!-- VSCO Grid -->
         <div class="vsco-grid">
-            <div class="vsco-item">
-                <img src="1.jpg" alt="Gallery item">
-            </div>
-            <div class="vsco-item">
-                <img src="2.jpg" alt="Gallery item">
-            </div>
-            <div class="vsco-item">
-                <img src="3.jpg" alt="Gallery item">
-            </div>
-            <div class="vsco-item">
-                <img src="4.jpeg" alt="Gallery item">
-            </div>
-            <div class="vsco-item">
-                <img src="5.jpg" alt="Gallery item">
-            </div>
-            <div class="vsco-item">
-                <img src="6.jpeg" alt="Gallery item">
-            </div>
-            <div class="vsco-item">
-                <img src="8.jpeg" alt="Gallery item">
-            </div>
-            <div class="vsco-item">
-                <img src="9.jpeg" alt="Gallery item">
-            </div>
-            <div class="vsco-item">
-                <img src="10.jpeg" alt="Gallery item">
-            </div>
-            <div class="vsco-item">
-                <img src="11.jpeg" alt="Gallery item">
-            </div>
+            <div class="vsco-item"><img src="1.jpg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="2.jpg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="3.jpg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="4.jpeg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="5.jpg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="6.jpeg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="7.jpeg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="8.jpeg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="9.jpeg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="10.jpeg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="11.jpeg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="12.jpeg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="13.jpg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="14.jpg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="15.jpg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="16.jpg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="17.jpg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="18.jpg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="19.jpg" alt="Gallery item"></div>
+            <div class="vsco-item"><img src="20.jpg" alt="Gallery item"></div>
         </div>
     </main>
 
