@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base - Clean background for VSCO vibe */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Mantenemos el color base del sitio */
+            font-family: 'Courier Prime', monospace;
+            color: #111;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Layout Container */
+        .wrapper {
+            flex: 1;
+            max-width: 1000px; /* Ancho máximo para que no se estire demasiado en PC */
+            margin: 0 auto;
+            padding: 40px 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Top Nav (Back button) */
+        .top-nav {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 50px;
+        }
+
+        .nav-item {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: lowercase;
+            text-decoration: none;
+            color: #111;
+            background: white;
+            padding: 5px 10px;
+            border: 1px solid #111;
+            box-shadow: 2px 2px 0px #111;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transform: rotate(-1deg);
+            display: inline-block;
+        }
+
+        .nav-item:hover {
+            transform: translate(-2px, -2px) rotate(0deg) !important;
+            box-shadow: 4px 4px 0px #111;
+        }
+
+        /* VSCO Grid */
+        .vsco-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columnas en escritorio */
+            gap: 15px; /* Espaciado uniforme estilo feed */
+        }
+
+        /* Individual Items */
+        .vsco-item {
+            width: 100%;
+            aspect-ratio: 4 / 5; /* Proporción vertical clásica de VSCO */
+            background-color: #e5e5e5; /* Color de fondo mientras carga la imagen */
+            overflow: hidden;
+        }
+
+        .vsco-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que la imagen llene el espacio sin deformarse */
+            display: block;
+            transition: filter 0.3s ease;
+        }
+
+        /* Efecto sutil al pasar el mouse */
+        .vsco-item:hover img {
+            filter: brightness(0.85); 
+            cursor: pointer;
+        }
+
+        /* Footer */
+        .site-footer {
+            text-align: center;
+            padding: 40px 20px 20px 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            color: #666;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .vsco-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets/celulares grandes */
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .vsco-grid {
+                grid-template-columns: 1fr; /* 1 columna en celulares pequeños */
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="wrapper">
+        <!-- Back button -->
+        <div class="top-nav">
+            <a href="index.html" class="nav-item">← back</a>
+        </div>
+
+        <!-- VSCO Grid -->
+        <div class="vsco-grid">
+            <div class="vsco-item">
+                <img src="1.jpg" alt="Gallery item">
+            </div>
+            <div class="vsco-item">
+                <img src="2.jpg" alt="Gallery item">
+            </div>
+            <div class="vsco-item">
+                <img src="3.jpg" alt="Gallery item">
+            </div>
+            <div class="vsco-item">
+                <img src="4.jpg" alt="Gallery item">
+            </div>
+            <div class="vsco-item">
+                <img src="5.jpg" alt="Gallery item">
+            </div>
+            <div class="vsco-item">
+                <img src="6.jpg" alt="Gallery item">
+            </div>
+            <div class="vsco-item">
+                <img src="8.jpg" alt="Gallery item">
+            </div>
+            <div class="vsco-item">
+                <img src="9.jpg" alt="Gallery item">
+            </div>
+            <div class="vsco-item">
+                <img src="10.jpg" alt="Gallery item">
+            </div>
+            <div class="vsco-item">
+                <img src="11.jpg" alt="Gallery item">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        antun rodriguez 2026.
+    </footer>
+
+</body>
+</html>
