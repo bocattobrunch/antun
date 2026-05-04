@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>antun. | contact</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base and Grid background */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: 
+                linear-gradient(#e5e5e5 1px, transparent 1px),
+                linear-gradient(90deg, #e5e5e5 1px, transparent 1px);
+            background-size: 50px 50px;
+            font-family: 'Courier Prime', monospace;
+            color: #111;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Layout Container */
+        .wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            gap: 30px;
+        }
+
+        /* Top Nav (Back button) */
+        .top-nav {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .nav-item {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: lowercase;
+            text-decoration: none;
+            color: #111;
+            background: white;
+            padding: 5px 10px;
+            border: 1px solid #111;
+            box-shadow: 2px 2px 0px #111;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transform: rotate(-1deg);
+        }
+
+        .nav-item:hover {
+            transform: translate(-2px, -2px) rotate(0deg) !important;
+            box-shadow: 4px 4px 0px #111;
+        }
+
+        /* The main contact card */
+        .contact-card {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            background: #f6f3eb; /* Paper-like color */
+            padding: 40px 50px;
+            box-shadow: 4px 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #dcd5c6;
+            transform: rotate(1deg);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .contact-section {
+            margin-bottom: 25px;
+        }
+
+        .contact-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #888;
+            font-size: 1rem;
+        }
+
+        /* Links styling inside the paper */
+        .contact-card a {
+            color: #111;
+            text-decoration: none;
+            border-bottom: 1px dashed #111;
+            transition: opacity 0.2s ease;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .contact-card a:hover {
+            opacity: 0.5;
+        }
+
+        /* Footer */
+        .site-footer {
+            text-align: center;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            color: #666;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-card {
+                padding: 30px 20px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="wrapper">
+        <!-- Back button -->
+        <div class="top-nav">
+            <a href="index.html" class="nav-item">← back</a>
+        </div>
+
+        <!-- Contact Card -->
+        <div class="contact-card">
+            <!-- Redes arriba -->
+            <div class="contact-section">
+                <div class="contact-title">socials.</div>
+                <a href="https://instagram.com/antunpluma" target="_blank">instagram</a>
+                <a href="https://www.youtube.com/@antunrodriguez" target="_blank">youtube</a>
+                <a href="https://pin.it/7mfsQesnr" target="_blank">pinterest</a>
+            </div>
+
+            <!-- Emails abajo -->
+            <div class="contact-section">
+                <div class="contact-title">emails.</div>
+                <a href="mailto:contacto@antunrodriguez.com">contacto@antunrodriguez.com</a>
+                <a href="mailto:antun.rodriguez@icloud.com">antun.rodriguez@icloud.com</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        antun rodriguez 2026.
+    </footer>
+
+</body>
+</html>
